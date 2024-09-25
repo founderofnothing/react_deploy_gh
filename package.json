@@ -2,11 +2,12 @@
   "name": "portfoliosuresh",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://alphasquare.github.io/react_deploy_gh",
+  "homepage": "https://founderofnothing.github.io/react_deploy_gh/",
   "type": "module",
   "scripts": {
     "predeoloy":"npm run build",
-    "deploy":"gh-pages -d build",
+     "deploy": "gh-pages -d dist",
+
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",

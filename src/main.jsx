@@ -6,7 +6,7 @@ import App from './App.jsx'
   
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename= '/react_deploy_gh/'>
     <App />
     </BrowserRouter>
   </StrictMode>
