@@ -323,7 +323,7 @@ react_production_min.version = "18.3.1";
 }
 var reactExports = react.exports;
 const index = /* @__PURE__ */ getDefaultExportFromCjs(reactExports);
-const React = /* @__PURE__ */ _mergeNamespaces({
+const React$1 = /* @__PURE__ */ _mergeNamespaces({
   __proto__: null,
   default: index
 }, [reactExports]);
@@ -8284,7 +8284,7 @@ const ViewTransitionContext = /* @__PURE__ */ reactExports.createContext({
   isTransitioning: false
 });
 const START_TRANSITION = "startTransition";
-const startTransitionImpl = React[START_TRANSITION];
+const startTransitionImpl = React$1[START_TRANSITION];
 function BrowserRouter(_ref4) {
   let {
     basename,
@@ -8716,5 +8716,5 @@ const App = () => {
   ] }) }) }) }) });
 };
 createRoot(document.getElementById("root")).render(
-  /* @__PURE__ */ jsxRuntimeExports.jsx(reactExports.StrictMode, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(BrowserRouter, { basename: "/react_deploy_gh/", children: /* @__PURE__ */ jsxRuntimeExports.jsx(App, {}) }) })
+  /* @__PURE__ */ jsxRuntimeExports.jsx(React.StrictMode, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(BrowserRouter, { basename: "/react_deploy_gh/", children: /* @__PURE__ */ jsxRuntimeExports.jsx(App, {}) }) })
 );
