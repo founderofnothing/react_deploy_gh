@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color:black ;
+    background-color:rgba(0, 0, 0, 0.664) ;
     font-family:Orbitron;
     overflow-x: hidden;
    
@@ -40,6 +40,7 @@ h1{
 .navbar{
     display: flex;
     justify-content: space-between;
+    background:gray;
     align-items:center ;
     min-width:100%;
     margin-left:auto;
