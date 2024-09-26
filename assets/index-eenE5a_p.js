@@ -8491,11 +8491,13 @@ const Hero = () => {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hero", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("img", { className: "bgimg", src: img, alt: "" }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "tag", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "headertag1", children: "ui/ux designer" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "headertag2", children: [
-        "full stack web devel",
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "infity", children: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "0 0 256 256", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { fill: "currentColor", d: "M252 128a60 60 0 0 1-102.43 42.43l-.49-.53l-59.86-67.59a36 36 0 1 0 0 51.38l3.08-3.48a12 12 0 1 1 18 15.91l-3.35 3.78l-.49.53a60 60 0 1 1 0-84.86l.49.53l59.86 67.59a36 36 0 1 0 0-51.38l-3.08 3.48a12 12 0 1 1-18-15.91l3.35-3.78l.49-.53A60 60 0 0 1 252 128" }) }) }),
-        " per"
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "headertag1", children: "ui/ux designer" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "headertag2", children: [
+          "full stack web devel",
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "infity", children: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "0 0 256 256", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { fill: "currentColor", d: "M252 128a60 60 0 0 1-102.43 42.43l-.49-.53l-59.86-67.59a36 36 0 1 0 0 51.38l3.08-3.48a12 12 0 1 1 18 15.91l-3.35 3.78l-.49.53a60 60 0 1 1 0-84.86l.49.53l59.86 67.59a36 36 0 1 0 0-51.38l-3.08 3.48a12 12 0 1 1-18-15.91l3.35-3.78l.49-.53A60 60 0 0 1 252 128" }) }) }),
+          " per"
+        ] })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "beta", children: "give life to your  website by adding  modern  technology" }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "cta", children: [
