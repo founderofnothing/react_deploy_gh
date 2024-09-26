@@ -8466,25 +8466,30 @@ function useViewTransitionState(to, opts) {
   return matchPath(path.pathname, nextPath) != null || matchPath(path.pathname, currentPath) != null;
 }
 const Navbar = () => {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "navbar", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "screen", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "mob", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mobsuresh", children: "s" }),
-      "r"
-    ] }) }),
+  const [isOpen, setIsOpen] = reactExports.useState(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "navbar", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "logo", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "mark", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "suresh", children: "suresh" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "moblogo", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "suresh", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "titile", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mob", children: "s" }),
+        "r"
+      ] }) }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "desklog", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "suresh2", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "titile2", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "desk2", children: "suresh" }),
         "rajan"
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "hamburgermenu", children: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 24 24", strokeWidth: 1.5, stroke: "currentColor", className: "size-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", d: "M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" }) }) })
+      ] }) }) })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "menu", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(NavLink, { to: "#", exact: true, activeClassName: "active", children: "Home" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(NavLink, { to: "/", activeClassName: "active", children: "About" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(NavLink, { to: "/", activeClassName: "active", children: "project" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(NavLink, { to: "/", activeClassName: "active", children: "contact us " })
-    ] })
-  ] });
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: isOpen ? "menu active " : "menu", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "cancelicon", onClick: toggleMenu, children: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 20 20", fill: "currentColor", className: "size-5", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { fillRule: "evenodd", d: "M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM8.28 7.22a.75.75 0 0 0-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 1 0 1.06 1.06L10 11.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L11.06 10l1.72-1.72a.75.75 0 0 0-1.06-1.06L10 8.94 8.28 7.22Z", clipRule: "evenodd" }) }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(NavLink, { to: "/", activeClassName: "active", children: "home" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(NavLink, { to: "/", activeClassName: "active", children: "about" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(NavLink, { to: "/", activeClassName: "active", children: "expreance" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(NavLink, { to: "/", activeClassName: "active", children: "contact" })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "menuicon", onClick: toggleMenu, children: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 20 20", fill: "currentColor", className: "size-3", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { fillRule: "evenodd", d: "M2 3.75A.75.75 0 0 1 2.75 3h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 3.75Zm0 4.167a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Zm0 4.166a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Zm0 4.167a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z", clipRule: "evenodd" }) }) })
+  ] }) });
 };
 const img = "/react_deploy_gh/assets/pic1-DCe7UV-h.png";
 const Hero = () => {
