@@ -55,7 +55,10 @@ h1{
     gap:20px;
 }
 
+.mob{
+    color: #ac25af;
 
+}
 
 
 
@@ -91,10 +94,10 @@ h1{
 }
 .cancelicon{
     display: block;
-    color: rgb(109, 14, 14);
+    color: rgb(0, 0, 0);
     position:relative;
-    top: 5%;
-    left:80%;
+    top: 2%;
+    left:75%;
     overflow: hidden;
 
 }
@@ -134,6 +137,12 @@ h1{
 }
 
 @media (max-width:425px) {
+    .desklog{
+        display:none;
+    }
+    .moblogo{
+        display: block;
+    }
 
  
     }
