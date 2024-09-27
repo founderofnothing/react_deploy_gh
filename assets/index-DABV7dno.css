@@ -105,6 +105,7 @@ h1{
     position: absolute;
     left:33%;
     z-index: 1;
+    top:-600px;
     width:64%;
     height: 100vh;
     background-color: rgb(255, 255, 255);
@@ -115,7 +116,6 @@ h1{
     
 }
 .menu.active{
-    display: block;
     top:1px;
     display: flex;
     flex-direction:column;
