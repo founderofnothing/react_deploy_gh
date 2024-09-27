@@ -6,6 +6,7 @@
     color:white;
 }
 
+
 body{
     background-color:black ;
     font-family:Orbitron;
@@ -40,6 +41,10 @@ h1{
 
 .moblogo, .menuicon, .cancelicon{
     display:none;
+}
+
+.menuicon{
+font-size:20px;
 }
 
 
@@ -81,20 +86,23 @@ h1{
 
 @media (max-width:768px) {
 
+    
+
+
 .navbar{
     overflow-x: hidden;
 }
 .menuicon{
     display: block;
-    font-size:15px;
+    
 
 }
 .cancelicon{
     display: block;
     color: rgb(0, 0, 0);
     position:relative;
-    top: 2%;
-    left:75%;
+    top:1%;
+    left:80%;
     overflow: hidden;
 
 }
@@ -115,22 +123,29 @@ h1{
     
     
 }
+.style{
+    color: blue;
+}
+
+
 .menu.active{
     display: block;
+    color: black;
+
     display: flex;
     flex-direction:column;
 
 }
-
-.active{
+.button{
+    color:black;
     font-family: poppins;
     margin-top:5px;
     font-weight: 400;
     font-size: 20px;
 }
-.active{
-    color:black;
-}
+
+
+
 .menu{
     display:none;
 }
@@ -200,10 +215,11 @@ h1{
 
   .bgimg{
     max-width: 100%; 
-    height: 700px;     
+    height:auto;     
     display: block;  
     object-fit: cover; 
       width: 100%;
+      z-index:-1;
      
     
   }
@@ -500,9 +516,9 @@ h1{
 
   .bgimg{
       max-width: 100%;  
-    height:300px;     
-    display: block;  
-    object-fit: cover; 
+      height:400px;     
+      display: block;  
+      object-fit: cover; 
   }
   .headertag1{
     top:10px;
@@ -540,7 +556,7 @@ h1{
 
   }
   .tag{
-    top:150px;
+    top:200px;
     left:45px;
     justify-content:center;
     position: absolute;
@@ -793,7 +809,7 @@ h1{
     .layoout{
         max-width:768px;
     }
-
+    
     .header11{
         font-size:20px;
         font-weight: 400;
@@ -834,10 +850,12 @@ h1{
     .ecard{
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
+        /*justify-content: center;*/
     }
     .rdna{
-        justify-content: center;
+        justify-content:flex-start;
+        text-align: center;
             font-weight: 200;
        
     }
@@ -1163,18 +1181,23 @@ body{
 
      }
      .para{
-        width:400px;
-        font-size:12px;
+        display: flex;
+        width:350px;
+        text-align: center;
+
+        font-size:11px;
      }
      .whatlayout2{
         width: 420px;
      }
      .sidebeta{
         font-size:15px;
-        justify-content: center;
+        justify-content:flex-start;
         margin:5px;
         font-weight: 100;
      }
+
+     
      .small{
         font-weight: 300;
      }
@@ -1184,13 +1207,13 @@ body{
         font-size: 100px;
         position:absolute;
         left:-100px;
-        top:2190px;
+        top:2250px;
         z-index:-1;
         font-weight: 500;
         margin:0px;
         padding: 0px;
         color:rgb(0, 0, 0);
-        -webkit-text-stroke: 2px rgba(189, 189, 189, 0.219);
+        -webkit-text-stroke: 2px rgba(189, 189, 189, 0.26);
         letter-spacing:20px;
     }
     
@@ -1215,7 +1238,8 @@ body{
 
      }
      .para{
-        width:340px;
+        width:300px;
+
         font-size:10px;
      }
      .watermarks{
@@ -1223,7 +1247,7 @@ body{
         font-size: 100px;
         position:absolute;
         left:-100px;
-        top:1900px;
+        top:1930px;
         z-index:-1;
         font-weight: 500;
         margin:0px;

@@ -8026,7 +8026,7 @@ var DataRouterStateHook$1 = /* @__PURE__ */ function(DataRouterStateHook2) {
   DataRouterStateHook2["UseRouteId"] = "useRouteId";
   return DataRouterStateHook2;
 }(DataRouterStateHook$1 || {});
-function useDataRouterContext$1(hookName) {
+function useDataRouterContext(hookName) {
   let ctx = reactExports.useContext(DataRouterContext);
   !ctx ? invariant(false) : void 0;
   return ctx;
@@ -8060,7 +8060,7 @@ function useRouteError() {
 function useNavigateStable() {
   let {
     router
-  } = useDataRouterContext$1(DataRouterHook$1.UseNavigateStable);
+  } = useDataRouterContext(DataRouterHook$1.UseNavigateStable);
   let id2 = useCurrentRouteId(DataRouterStateHook$1.UseNavigateStable);
   let activeRef = reactExports.useRef(false);
   useIsomorphicLayoutEffect(() => {
@@ -8232,15 +8232,12 @@ function shouldProcessLinkClick(event, target) {
   (!target || target === "_self") && // Let browser handle "target=_blank" etc.
   !isModifiedEvent(event);
 }
-const _excluded = ["onClick", "relative", "reloadDocument", "replace", "state", "target", "to", "preventScrollReset", "unstable_viewTransition"], _excluded2 = ["aria-current", "caseSensitive", "className", "end", "style", "to", "unstable_viewTransition", "children"];
+const _excluded = ["onClick", "relative", "reloadDocument", "replace", "state", "target", "to", "preventScrollReset", "unstable_viewTransition"];
 const REACT_ROUTER_VERSION = "6";
 try {
   window.__reactRouterVersion = REACT_ROUTER_VERSION;
 } catch (e) {
 }
-const ViewTransitionContext = /* @__PURE__ */ reactExports.createContext({
-  isTransitioning: false
-});
 const START_TRANSITION = "startTransition";
 const startTransitionImpl = React$1[START_TRANSITION];
 function BrowserRouter(_ref4) {
@@ -8340,65 +8337,6 @@ const Link = /* @__PURE__ */ reactExports.forwardRef(function LinkWithRef(_ref7,
     }))
   );
 });
-const NavLink = /* @__PURE__ */ reactExports.forwardRef(function NavLinkWithRef(_ref8, ref) {
-  let {
-    "aria-current": ariaCurrentProp = "page",
-    caseSensitive = false,
-    className: classNameProp = "",
-    end = false,
-    style: styleProp,
-    to,
-    unstable_viewTransition,
-    children
-  } = _ref8, rest = _objectWithoutPropertiesLoose(_ref8, _excluded2);
-  let path = useResolvedPath(to, {
-    relative: rest.relative
-  });
-  let location = useLocation();
-  let routerState = reactExports.useContext(DataRouterStateContext);
-  let {
-    navigator: navigator2,
-    basename
-  } = reactExports.useContext(NavigationContext);
-  let isTransitioning = routerState != null && // Conditional usage is OK here because the usage of a data router is static
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  useViewTransitionState(path) && unstable_viewTransition === true;
-  let toPathname = navigator2.encodeLocation ? navigator2.encodeLocation(path).pathname : path.pathname;
-  let locationPathname = location.pathname;
-  let nextLocationPathname = routerState && routerState.navigation && routerState.navigation.location ? routerState.navigation.location.pathname : null;
-  if (!caseSensitive) {
-    locationPathname = locationPathname.toLowerCase();
-    nextLocationPathname = nextLocationPathname ? nextLocationPathname.toLowerCase() : null;
-    toPathname = toPathname.toLowerCase();
-  }
-  if (nextLocationPathname && basename) {
-    nextLocationPathname = stripBasename(nextLocationPathname, basename) || nextLocationPathname;
-  }
-  const endSlashPosition = toPathname !== "/" && toPathname.endsWith("/") ? toPathname.length - 1 : toPathname.length;
-  let isActive = locationPathname === toPathname || !end && locationPathname.startsWith(toPathname) && locationPathname.charAt(endSlashPosition) === "/";
-  let isPending = nextLocationPathname != null && (nextLocationPathname === toPathname || !end && nextLocationPathname.startsWith(toPathname) && nextLocationPathname.charAt(toPathname.length) === "/");
-  let renderProps = {
-    isActive,
-    isPending,
-    isTransitioning
-  };
-  let ariaCurrent = isActive ? ariaCurrentProp : void 0;
-  let className;
-  if (typeof classNameProp === "function") {
-    className = classNameProp(renderProps);
-  } else {
-    className = [classNameProp, isActive ? "active" : null, isPending ? "pending" : null, isTransitioning ? "transitioning" : null].filter(Boolean).join(" ");
-  }
-  let style = typeof styleProp === "function" ? styleProp(renderProps) : styleProp;
-  return /* @__PURE__ */ reactExports.createElement(Link, _extends({}, rest, {
-    "aria-current": ariaCurrent,
-    className,
-    ref,
-    style,
-    to,
-    unstable_viewTransition
-  }), typeof children === "function" ? children(renderProps) : children);
-});
 var DataRouterHook;
 (function(DataRouterHook2) {
   DataRouterHook2["UseScrollRestoration"] = "useScrollRestoration";
@@ -8413,11 +8351,6 @@ var DataRouterStateHook;
   DataRouterStateHook2["UseFetchers"] = "useFetchers";
   DataRouterStateHook2["UseScrollRestoration"] = "useScrollRestoration";
 })(DataRouterStateHook || (DataRouterStateHook = {}));
-function useDataRouterContext(hookName) {
-  let ctx = reactExports.useContext(DataRouterContext);
-  !ctx ? invariant(false) : void 0;
-  return ctx;
-}
 function useLinkClickHandler(to, _temp) {
   let {
     target,
@@ -8446,25 +8379,6 @@ function useLinkClickHandler(to, _temp) {
     }
   }, [location, navigate, path, replaceProp, state, target, to, preventScrollReset, relative, unstable_viewTransition]);
 }
-function useViewTransitionState(to, opts) {
-  if (opts === void 0) {
-    opts = {};
-  }
-  let vtContext = reactExports.useContext(ViewTransitionContext);
-  !(vtContext != null) ? invariant(false) : void 0;
-  let {
-    basename
-  } = useDataRouterContext(DataRouterHook.useViewTransitionState);
-  let path = useResolvedPath(to, {
-    relative: opts.relative
-  });
-  if (!vtContext.isTransitioning) {
-    return false;
-  }
-  let currentPath = stripBasename(vtContext.currentLocation.pathname, basename) || vtContext.currentLocation.pathname;
-  let nextPath = stripBasename(vtContext.nextLocation.pathname, basename) || vtContext.nextLocation.pathname;
-  return matchPath(path.pathname, nextPath) != null || matchPath(path.pathname, currentPath) != null;
-}
 const Navbar = () => {
   const [isOpen, setIsOpen] = reactExports.useState(false);
   const toggleMenu = () => {
@@ -8483,12 +8397,12 @@ const Navbar = () => {
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: isOpen ? "menu active " : "menu", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "cancelicon", onClick: toggleMenu, children: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 20 20", fill: "currentColor", className: "size-5", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { fillRule: "evenodd", d: "M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM8.28 7.22a.75.75 0 0 0-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 1 0 1.06 1.06L10 11.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L11.06 10l1.72-1.72a.75.75 0 0 0-1.06-1.06L10 8.94 8.28 7.22Z", clipRule: "evenodd" }) }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(NavLink, { to: "/", activeClassName: "active", children: "home" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(NavLink, { to: "/", activeClassName: "active", children: "about" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(NavLink, { to: "/", activeClassName: "active", children: "expreance" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(NavLink, { to: "/", activeClassName: "active", children: "contact" })
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/#", className: "button", onClick: toggleMenu, children: " home" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/about", className: "button", onClick: toggleMenu, children: " about" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/expreance", className: "button", onClick: toggleMenu, children: " expreance" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/", className: "button", onClick: toggleMenu, children: " contact" })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "menuicon", onClick: toggleMenu, children: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 20 20", fill: "currentColor", className: "size-3", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { fillRule: "evenodd", d: "M2 3.75A.75.75 0 0 1 2.75 3h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 3.75Zm0 4.167a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Zm0 4.166a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Zm0 4.167a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z", clipRule: "evenodd" }) }) })
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "menuicon", onClick: toggleMenu, children: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "-5 -7 24 24", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { fill: "white", d: "M1 0h5a1 1 0 1 1 0 2H1a1 1 0 1 1 0-2m7 8h5a1 1 0 0 1 0 2H8a1 1 0 1 1 0-2M1 4h12a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2" }) }) })
   ] }) });
 };
 const img = "/react_deploy_gh/assets/pic1-DCe7UV-h.png";
@@ -8638,12 +8552,26 @@ const What = () => {
   ] }) });
 };
 const App = () => {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Routes, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/", element: /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Hero, {}),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(About, {}),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(What, {})
-  ] }) }) }) });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Routes, { children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/", element: /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Hero, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(About, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(What, {})
+    ] }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/about", element: /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(About, {})
+    ] }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/expreance", element: /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(What, {})
+    ] }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/contact", element: /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(About, {})
+    ] }) })
+  ] }) });
 };
 createRoot(document.getElementById("root")).render(
   /* @__PURE__ */ jsxRuntimeExports.jsx(React.StrictMode, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(BrowserRouter, { basename: "/react_deploy_gh/", children: /* @__PURE__ */ jsxRuntimeExports.jsx(App, {}) }) })
