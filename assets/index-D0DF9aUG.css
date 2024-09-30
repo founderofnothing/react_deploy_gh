@@ -18,7 +18,11 @@ body, html {
   .spline-container iframe[src*="watermark-element"] {
     display: none;
   }
-  a{
+  /* Add this to your global CSS file or in your component's CSS */
+html {
+  scroll-behavior: smooth;
+}
+a{
     text-decoration: none;
     color:white;
 }
@@ -621,7 +625,7 @@ font-size:20px;
     font-size:22px;
   }
   .headertag2{
-    font-size:23px ;
+    font-size:20px ;
   }
   .infity{
     top:11px;
@@ -703,7 +707,7 @@ font-size:20px;
     font-weight: 500;
   }
   .headertag2{
-    font-size:21px ;
+    font-size:18px ;
     font-weight:600;
 
   }
@@ -780,7 +784,7 @@ font-size:20px;
   }
 
   .headertag2{
-    font-size: 19px;
+    font-size: 16px;
     font-weight:600;
   }
   .hero{

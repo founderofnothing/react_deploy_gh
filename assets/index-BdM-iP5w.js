@@ -38356,7 +38356,7 @@ function OR() {
   if (_R) return;
   if (Q0) return Q0;
   async function n10() {
-    await __vitePreload(() => import("./howler-D7iFUYM3.js").then((n11) => n11.h), true ? [] : void 0), DR(window !== void 0 ? window : global), _R = true;
+    await __vitePreload(() => import("./howler-DKbyuwrm.js").then((n11) => n11.h), true ? [] : void 0), DR(window !== void 0 ? window : global), _R = true;
   }
   return Q0 = n10(), Q0;
 }
