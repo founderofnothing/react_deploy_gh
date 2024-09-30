@@ -82,7 +82,7 @@ var B$1 = { isMounted: function() {
 }, enqueueForceUpdate: function() {
 }, enqueueReplaceState: function() {
 }, enqueueSetState: function() {
-} }, C$1 = Object.assign, D$1 = {};
+} }, C$2 = Object.assign, D$1 = {};
 function E$2(a, b10, e) {
   this.props = a;
   this.context = b10;
@@ -108,7 +108,7 @@ function G$1(a, b10, e) {
 }
 var H$1 = G$1.prototype = new F();
 H$1.constructor = G$1;
-C$1(H$1, E$2.prototype);
+C$2(H$1, E$2.prototype);
 H$1.isPureReactComponent = true;
 var I$2 = Array.isArray, J = Object.prototype.hasOwnProperty, K$2 = { current: null }, L$1 = { key: true, ref: true, __self: true, __source: true };
 function M$2(a, b10, e) {
@@ -224,7 +224,7 @@ react_production_min.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = W$1;
 react_production_min.act = X$1;
 react_production_min.cloneElement = function(a, b10, e) {
   if (null === a || void 0 === a) throw Error("React.cloneElement(...): The argument must be a React element, but you passed " + a + ".");
-  var d = C$1({}, a.props), c = a.key, k10 = a.ref, h = a._owner;
+  var d = C$2({}, a.props), c = a.key, k10 = a.ref, h = a._owner;
   if (null != b10) {
     void 0 !== b10.ref && (k10 = b10.ref, h = K$2.current);
     void 0 !== b10.key && (c = "" + b10.key);
@@ -1580,7 +1580,7 @@ function Cc$1(a, b10) {
     c &= ~e;
   }
 }
-var C = 0;
+var C$1 = 0;
 function Dc$1(a) {
   a &= -a;
   return 1 < a ? 4 < a ? 0 !== (a & 268435455) ? 16 : 536870912 : 4 : 1;
@@ -1704,21 +1704,21 @@ function bd$1(a) {
 }
 var cd$1 = ua$1.ReactCurrentBatchConfig, dd$1 = true;
 function ed$1(a, b10, c, d) {
-  var e = C, f10 = cd$1.transition;
+  var e = C$1, f10 = cd$1.transition;
   cd$1.transition = null;
   try {
-    C = 1, fd$1(a, b10, c, d);
+    C$1 = 1, fd$1(a, b10, c, d);
   } finally {
-    C = e, cd$1.transition = f10;
+    C$1 = e, cd$1.transition = f10;
   }
 }
 function gd$1(a, b10, c, d) {
-  var e = C, f10 = cd$1.transition;
+  var e = C$1, f10 = cd$1.transition;
   cd$1.transition = null;
   try {
-    C = 4, fd$1(a, b10, c, d);
+    C$1 = 4, fd$1(a, b10, c, d);
   } finally {
-    C = e, cd$1.transition = f10;
+    C$1 = e, cd$1.transition = f10;
   }
 }
 function fd$1(a, b10, c, d) {
@@ -2717,10 +2717,10 @@ function ig$1(a) {
 function jg$1() {
   if (!gg && null !== eg$1) {
     gg = true;
-    var a = 0, b10 = C;
+    var a = 0, b10 = C$1;
     try {
       var c = eg$1;
-      for (C = 1; a < c.length; a++) {
+      for (C$1 = 1; a < c.length; a++) {
         var d = c[a];
         do
           d = d(true);
@@ -2731,7 +2731,7 @@ function jg$1() {
     } catch (e) {
       throw null !== eg$1 && (eg$1 = eg$1.slice(a + 1)), ac$1(fc$1, jg$1), e;
     } finally {
-      C = b10, gg = false;
+      C$1 = b10, gg = false;
     }
   }
   return null;
@@ -3665,15 +3665,15 @@ function ui(a, b10, c) {
   return b10;
 }
 function vi$1(a, b10) {
-  var c = C;
-  C = 0 !== c && 4 > c ? c : 4;
+  var c = C$1;
+  C$1 = 0 !== c && 4 > c ? c : 4;
   a(true);
   var d = Gh$1.transition;
   Gh$1.transition = {};
   try {
     a(false), b10();
   } finally {
-    C = c, Gh$1.transition = d;
+    C$1 = c, Gh$1.transition = d;
   }
 }
 function wi$1() {
@@ -5624,7 +5624,7 @@ function yi$1(a) {
   if (0 === (a.mode & 1)) return 1;
   if (0 !== (K$1 & 2) && 0 !== Z) return Z & -Z;
   if (null !== Kg$1.transition) return 0 === Bk$1 && (Bk$1 = yc$1()), Bk$1;
-  a = C;
+  a = C$1;
   if (0 !== a) return a;
   a = window.event;
   a = void 0 === a ? 16 : jd$1(a.type);
@@ -5838,11 +5838,11 @@ function Rk$1(a) {
   null !== wk$1 && 0 === wk$1.tag && 0 === (K$1 & 6) && Hk$1();
   var b10 = K$1;
   K$1 |= 1;
-  var c = ok$1.transition, d = C;
+  var c = ok$1.transition, d = C$1;
   try {
-    if (ok$1.transition = null, C = 1, a) return a();
+    if (ok$1.transition = null, C$1 = 1, a) return a();
   } finally {
-    C = d, ok$1.transition = c, K$1 = b10, 0 === (K$1 & 6) && jg$1();
+    C$1 = d, ok$1.transition = c, K$1 = b10, 0 === (K$1 & 6) && jg$1();
   }
 }
 function Hj$1() {
@@ -6090,11 +6090,11 @@ function Sk$1(a) {
   0 === T && (T = 5);
 }
 function Pk$1(a, b10, c) {
-  var d = C, e = ok$1.transition;
+  var d = C$1, e = ok$1.transition;
   try {
-    ok$1.transition = null, C = 1, Wk$1(a, b10, c, d);
+    ok$1.transition = null, C$1 = 1, Wk$1(a, b10, c, d);
   } finally {
-    ok$1.transition = e, C = d;
+    ok$1.transition = e, C$1 = d;
   }
   return null;
 }
@@ -6122,8 +6122,8 @@ function Wk$1(a, b10, c, d) {
   if (0 !== (c.subtreeFlags & 15990) || f10) {
     f10 = ok$1.transition;
     ok$1.transition = null;
-    var g = C;
-    C = 1;
+    var g = C$1;
+    C$1 = 1;
     var h = K$1;
     K$1 |= 4;
     nk$1.current = null;
@@ -6136,7 +6136,7 @@ function Wk$1(a, b10, c, d) {
     hk$1(c);
     dc$1();
     K$1 = h;
-    C = g;
+    C$1 = g;
     ok$1.transition = f10;
   } else a.current = c;
   vk$1 && (vk$1 = false, wk$1 = a, xk$1 = e);
@@ -6154,10 +6154,10 @@ function Wk$1(a, b10, c, d) {
 }
 function Hk$1() {
   if (null !== wk$1) {
-    var a = Dc$1(xk$1), b10 = ok$1.transition, c = C;
+    var a = Dc$1(xk$1), b10 = ok$1.transition, c = C$1;
     try {
       ok$1.transition = null;
-      C = 16 > a ? 16 : a;
+      C$1 = 16 > a ? 16 : a;
       if (null === wk$1) var d = false;
       else {
         a = wk$1;
@@ -6273,7 +6273,7 @@ function Hk$1() {
       }
       return d;
     } finally {
-      C = c, ok$1.transition = b10;
+      C$1 = c, ok$1.transition = b10;
     }
   }
   return false;
@@ -6888,14 +6888,14 @@ Gc$1 = function(a) {
   }
 };
 Hc = function() {
-  return C;
+  return C$1;
 };
 Ic$1 = function(a, b10) {
-  var c = C;
+  var c = C$1;
   try {
-    return C = a, b10();
+    return C$1 = a, b10();
   } finally {
-    C = c;
+    C$1 = c;
   }
 };
 yb$1 = function(a, b10, c) {
@@ -8401,7 +8401,7 @@ const Navbar = () => {
       /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/#", className: "button", onClick: toggleMenu, children: " home" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/about", className: "button", onClick: toggleMenu, children: " about" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/expreance", className: "button", onClick: toggleMenu, children: " expreance" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/", className: "button", onClick: toggleMenu, children: " contact" })
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/error", className: "button", onClick: toggleMenu, children: " contact" })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "menuicon", onClick: toggleMenu, children: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "-5 -7 24 24", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { fill: "white", d: "M1 0h5a1 1 0 1 1 0 2H1a1 1 0 1 1 0-2m7 8h5a1 1 0 0 1 0 2H8a1 1 0 1 1 0-2M1 4h12a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2" }) }) })
   ] }) });
@@ -38356,7 +38356,7 @@ function OR() {
   if (_R) return;
   if (Q0) return Q0;
   async function n10() {
-    await __vitePreload(() => import("./howler-CaYMt59z.js").then((n11) => n11.h), true ? [] : void 0), DR(window !== void 0 ? window : global), _R = true;
+    await __vitePreload(() => import("./howler-D7iFUYM3.js").then((n11) => n11.h), true ? [] : void 0), DR(window !== void 0 ? window : global), _R = true;
   }
   return Q0 = n10(), Q0;
 }
@@ -56239,7 +56239,7 @@ const I = [], K = { width: "100%", height: "100%" }, M = reactExports.forwardRef
     }
   );
 });
-reactExports.forwardRef(
+const C = reactExports.forwardRef(
   ({
     scene: s,
     style: u10,
@@ -56341,10 +56341,9 @@ reactExports.forwardRef(
     );
   }
 );
-const img = "/react_deploy_gh/assets/pic1-DCe7UV-h.png";
 const Hero = () => {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hero", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("img", { className: "bgimg", src: img, alt: "" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "jacky", children: /* @__PURE__ */ jsxRuntimeExports.jsx(C, { className: "animie", scene: "https://prod.spline.design/tJiuwPwLYTa9g13V/scene.splinecode" }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "tag", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "headertag1", children: "ui/ux designer" }),
@@ -56356,8 +56355,8 @@ const Hero = () => {
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "beta", children: "give life to your  website by adding  modern  technology" }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "cta", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "cta1", children: /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "btn", children: " let's chat" }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "cta2", children: /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "btn", children: "contact" }) })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "cta1", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "https://www.instagram.com/direct/inbox/?next=%2F", classname: "btn", children: " let'schat" }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "cta2", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/error", className: "", children: "contact" }) })
       ] })
     ] })
   ] });
@@ -56487,6 +56486,13 @@ const What = () => {
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "watermarks", children: "what" }) })
   ] }) });
 };
+const Error$1 = () => {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "error", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "blue", children: "404 page" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "this page is under maintanace " }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/", className: "relocate", children: "HOME" })
+  ] });
+};
 const App = () => {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Routes, { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/", element: /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
@@ -56506,7 +56512,8 @@ const App = () => {
     /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/contact", element: /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}),
       /* @__PURE__ */ jsxRuntimeExports.jsx(About, {})
-    ] }) })
+    ] }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/error", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Error$1, {}) })
   ] }) });
 };
 createRoot(document.getElementById("root")).render(

@@ -15,6 +15,9 @@ body, html {
     box-sizing: border-box;
     outline: none;
   }
+  .spline-container iframe[src*="watermark-element"] {
+    display: none;
+  }
   a{
     text-decoration: none;
     color:white;
@@ -275,14 +278,18 @@ font-size:20px;
  }
 .btn{
   margin:15px;
+  font-size:19px;
 }
 
  .cta1{
    background-color:#ac25af;
    padding-left: 40px;
    padding-right:40px;
+   padding-top:14px;
+   padding-bottom:14px;
    border-radius: 12px;
    margin:0px;
+   font-size:30px;
   }
   
 
@@ -292,6 +299,8 @@ font-size:20px;
     border-radius: 12px;
     padding-left: 30px;
     padding-right:30px;
+    padding-top:17px;
+   padding-bottom:17px;
     
   }
 
@@ -323,7 +332,10 @@ font-size:20px;
  
 }
 
+
+
 /*
+
 .infity {
   display: inline-block;
   animation: rotate-infinity 0.6s linear infinite;
@@ -340,22 +352,16 @@ font-size:20px;
     transform: rotate(-360deg);
   }
 }
-*/
+  */
+
 /*
-
-.animie{
- width:60%;
- height:70%;
- display: flex;
-  position:relative;
-  top:5%;
-}*/
-
-canvas{
-  width:500px;
-  height:500px;
-  
+.jacky{
+  width:600px;
+  height:400px;
+  margin-bottom:90px;
+  position: fixed;
 }
+*/
 
 
 .infity,svg{
@@ -368,6 +374,17 @@ canvas{
 
 
 @media ( max-width:2560px) {
+
+  .jacky{
+    width:2500px;
+    height:1500px;
+    margin-bottom:100px;
+    display:flex;
+    flex-direction: row;
+    position: relative;
+    top:-90px;
+  }
+
 
   .hero{
     max-width:2560;
@@ -407,6 +424,16 @@ canvas{
 }
 
 @media ( max-width:1440px) {
+
+  .jacky{
+    width:1380px;
+    height:900px;
+    margin-bottom:100px;
+    display:flex;
+    flex-direction: row;
+    position: relative;
+    top:-90px;
+  }
 
   .hero{
     max-width:1440px;
@@ -450,6 +477,17 @@ canvas{
 }
 
 @media ( max-width:1024px) {
+
+
+  .jacky{
+    width:1000px;
+    height:800px;
+    margin-bottom:100px;
+    display:flex;
+    flex-direction: row;
+    position: relative;
+    top:-90px;
+  }
   
   .hero{
     max-width:1024px;
@@ -492,6 +530,17 @@ canvas{
 }
 
 @media ( max-width:768px) {
+
+
+  .jacky{
+    width:750px;
+    height:500px;
+    margin-bottom:100px;
+    display:flex;
+    flex-direction: row;
+    position: relative;
+    top:-50px;
+  }
   .hero{
     max-width:768px;
     overflow-x: hidden;
@@ -503,10 +552,10 @@ canvas{
 
   }
   .headertag1{
-    font-size:25px;
+    font-size:28px;
   }
   .headertag2{
-    font-size:30px ;
+    font-size:40px ;
   }
   .infity{
     top:25px;
@@ -523,9 +572,14 @@ canvas{
   .cta{
     margin:6px;
   }
-  .cta1 .cta2 {
-    padding-left:15px;
-    padding-right:15px;
+  .cta1 ,.cta2 {
+    padding-left:12px;
+    padding-right:12px;
+    padding-top:10px;
+   padding-bottom:10px;
+   border-radius:7px;
+   font-size:25px;
+   font-weight: 400;
 
   }
   .tag{
@@ -539,6 +593,16 @@ canvas{
 }
 
 @media ( max-width:425px) {
+
+  .jacky{
+    width:410px;
+    height:400px;
+    margin-bottom:100px;
+    display:flex;
+    flex-direction: row;
+    position: relative;
+    top:-50px;
+  }
 
  .hero{
   max-width:425px;
@@ -554,10 +618,10 @@ canvas{
   }
   .headertag1{
     top:10px;
-    font-size:18px;
+    font-size:22px;
   }
   .headertag2{
-    font-size:18px ;
+    font-size:23px ;
   }
   .infity{
     top:11px;
@@ -565,7 +629,7 @@ canvas{
   .beta{
     font-size:12px;
     font-weight: 300;
-    margin:0px;
+    margin-top:5px;
   }
   .btn{
     font-size:12px;
@@ -577,14 +641,24 @@ canvas{
   .cta1 {
     padding-left:12px;
     padding-right:12px;
-    border-radius:7px;
+    border-radius:5px;
+    padding-top:8px;
+   padding-bottom:8px;
+   border-radius:7px;
+   font-size:17px;
+   font-weight: 400;
 
 
   }
   .cta2 {
     padding-left:12px;
-    padding-right:12px; 
-    border-radius:7px;
+    padding-right:12px;
+    border-radius:5px;
+    padding-top:8px;
+   padding-bottom:8px;
+   border-radius:7px;
+   font-size:15px;
+   font-weight: 400;
 
   }
   .tag{
@@ -603,7 +677,15 @@ canvas{
 
 @media ( max-width:375px) {
 
-
+  .jacky{
+    width:370px;
+    height:400px;
+    margin-bottom:100px;
+    display:flex;
+    flex-direction: row;
+    position: relative;
+    top:-50px;
+  }
  .hero{
   max-width:375px;
   overflow-x: hidden;
@@ -617,11 +699,11 @@ canvas{
   }
   .headertag1{
     top:10px;
-    font-size:14px;
+    font-size:17px;
     font-weight: 500;
   }
   .headertag2{
-    font-size:17px ;
+    font-size:21px ;
     font-weight:600;
 
   }
@@ -630,9 +712,9 @@ canvas{
     left:2px;
   }
   .beta{
-    font-size:10px;
+    font-size:14px;
     font-weight: 300;
-    margin:0px;
+    margin-top:4px;
   }
   .btn{
     font-size:12px;
@@ -646,14 +728,24 @@ canvas{
   .cta1 {
     padding-left:12px;
     padding-right:12px;
-    border-radius:7px;
+    border-radius:5px;
+    padding-top:8px;
+   padding-bottom:8px;
+   border-radius:5px;
+   font-size:16px;
+   font-weight: 400;
 
 
   }
   .cta2 {
     padding-left:12px;
-    padding-right:12px; 
-    border-radius:7px;
+    padding-right:12px;
+    border-radius:5px;
+    padding-top:8px;
+   padding-bottom:8px;
+   border-radius:5px;
+   font-size:15px;
+   font-weight: 400;
 
   }
   .tag{
@@ -668,8 +760,23 @@ canvas{
 } 
 
 @media ( max-width:320px) {
+
+
+
+
+  .jacky{
+    width:300px;
+    height:400px;
+    margin-bottom:100px;
+    display:flex;
+    flex-direction: row;
+    position: relative;
+    top:-50px;
+  }
+
+  
   .headertag1{
-    font-size:15px;
+    font-size:19px;
   }
 
   .headertag2{
@@ -678,6 +785,7 @@ canvas{
   }
   .hero{
     max-width:320px;
+    height:400px;
     overflow-x: hidden;
   }
   .tag{
@@ -1356,4 +1464,29 @@ body{
     letter-spacing:20px;
 }
     
+}
+.error{
+    display: flex;
+    flex-direction: column;
+    top: 60%;
+    align-items: center;
+    gap:20px;
+    position: relative;
+    top:200px;
+}
+
+
+
+.blue{
+   color:#ac25af;
+  
+}
+
+.relocate{
+    height:20px;
+    width:80px;
+    border-radius:2px;
+    color: black;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
 }
