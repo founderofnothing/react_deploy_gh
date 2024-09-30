@@ -776,6 +776,11 @@ font-size:20px;
     flex-direction: row;
     position: relative;
     top:-50px;
+    /* Smooth transition for any changes in width, height, or opacity */
+
+  transition: all 0.5s ease-in-out;
+
+
   }
 
   
