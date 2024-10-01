@@ -38356,7 +38356,7 @@ function OR() {
   if (_R) return;
   if (Q0) return Q0;
   async function n10() {
-    await __vitePreload(() => import("./howler-CZTd2F9Y.js").then((n11) => n11.h), true ? [] : void 0), DR(window !== void 0 ? window : global), _R = true;
+    await __vitePreload(() => import("./howler-DxjZG8AD.js").then((n11) => n11.h), true ? [] : void 0), DR(window !== void 0 ? window : global), _R = true;
   }
   return Q0 = n10(), Q0;
 }
@@ -56343,7 +56343,7 @@ const C = reactExports.forwardRef(
 );
 const Hero = () => {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hero", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "jacky", children: /* @__PURE__ */ jsxRuntimeExports.jsx(C, { className: "animie", scene: "https://prod.spline.design/tJiuwPwLYTa9g13V/scene.splinecode" }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "jacky", children: /* @__PURE__ */ jsxRuntimeExports.jsx(C, { className: "animie", scene: "https://prod.spline.design/Ku0F0Af0FMbYMiMD/scene.splinecode" }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "tag", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "headertag1", children: "ui/ux designer" }),
