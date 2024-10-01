@@ -38356,7 +38356,7 @@ function OR() {
   if (_R) return;
   if (Q0) return Q0;
   async function n10() {
-    await __vitePreload(() => import("./howler-BgLD84u9.js").then((n11) => n11.h), true ? [] : void 0), DR(window !== void 0 ? window : global), _R = true;
+    await __vitePreload(() => import("./howler-CKyfLJDr.js").then((n11) => n11.h), true ? [] : void 0), DR(window !== void 0 ? window : global), _R = true;
   }
   return Q0 = n10(), Q0;
 }
@@ -56349,7 +56349,7 @@ const Hero = () => {
         /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "headertag1", children: "ui/ux designer" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "headertag2", children: [
           "full stack web devel",
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "infity", children: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "0 0 256 256", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { fill: "currentColor", d: "M252 128a60 60 0 0 1-102.43 42.43l-.49-.53l-59.86-67.59a36 36 0 1 0 0 51.38l3.08-3.48a12 12 0 1 1 18 15.91l-3.35 3.78l-.49.53a60 60 0 1 1 0-84.86l.49.53l59.86 67.59a36 36 0 1 0 0-51.38l-3.08 3.48a12 12 0 1 1-18-15.91l3.35-3.78l.49-.53A60 60 0 0 1 252 128" }) }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "span", children: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { className: "infity", xmlns: "http://www.w3.org/2000/svg", width: "1em", height: "1em", viewBox: "0 0 256 256", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { fill: "currentColor", d: "M252 128a60 60 0 0 1-102.43 42.43l-.49-.53l-59.86-67.59a36 36 0 1 0 0 51.38l3.08-3.48a12 12 0 1 1 18 15.91l-3.35 3.78l-.49.53a60 60 0 1 1 0-84.86l.49.53l59.86 67.59a36 36 0 1 0 0-51.38l-3.08 3.48a12 12 0 1 1-18-15.91l3.35-3.78l.49-.53A60 60 0 0 1 252 128" }) }) }),
           " per"
         ] })
       ] }),
@@ -56486,35 +56486,13 @@ const What = () => {
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "watermarks", children: "what" }) })
   ] }) });
 };
-const Error$1 = () => {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "error", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "blue", children: "404 page" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "this page is under maintanace " }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/", className: "relocate", children: "HOME" })
-  ] });
-};
 const App = () => {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Routes, { children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/", element: /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Hero, {}),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(About, {}),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(What, {})
-    ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/about", element: /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(About, {})
-    ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/expreance", element: /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(What, {})
-    ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/contact", element: /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(About, {})
-    ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/error", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Error$1, {}) })
-  ] }) });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Routes, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/", element: /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Hero, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(About, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(What, {})
+  ] }) }) }) });
 };
 createRoot(document.getElementById("root")).render(
   /* @__PURE__ */ jsxRuntimeExports.jsx(React.StrictMode, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(BrowserRouter, { basename: "/react_deploy_gh/", children: /* @__PURE__ */ jsxRuntimeExports.jsx(App, {}) }) })
