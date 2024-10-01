@@ -893,7 +893,11 @@ body{
 
 }
 
-
+.size{
+    font-size:20px;
+    width:29px;
+    height:29px;
+}
 
 
 .whatlayout2{
