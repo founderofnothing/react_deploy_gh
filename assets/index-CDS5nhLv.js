@@ -38356,7 +38356,7 @@ function OR() {
   if (_R) return;
   if (Q0) return Q0;
   async function n10() {
-    await __vitePreload(() => import("./howler-DxjZG8AD.js").then((n11) => n11.h), true ? [] : void 0), DR(window !== void 0 ? window : global), _R = true;
+    await __vitePreload(() => import("./howler-YkEk_pa4.js").then((n11) => n11.h), true ? [] : void 0), DR(window !== void 0 ? window : global), _R = true;
   }
   return Q0 = n10(), Q0;
 }
@@ -56343,7 +56343,7 @@ const C = reactExports.forwardRef(
 );
 const Hero = () => {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hero", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "jacky", children: /* @__PURE__ */ jsxRuntimeExports.jsx(C, { className: "animie", scene: "https://prod.spline.design/Ku0F0Af0FMbYMiMD/scene.splinecode" }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "jacky", children: /* @__PURE__ */ jsxRuntimeExports.jsx(C, { className: "animie", scene: "https://prod.spline.design/tJiuwPwLYTa9g13V/scene.splinecode" }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "tag", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "headertag1", children: "ui/ux designer" }),
@@ -56486,13 +56486,36 @@ const What = () => {
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "watermarks", children: "what" }) })
   ] }) });
 };
+const Error$1 = () => {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "error", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "blue", children: "404 page" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "this page is under maintanace " }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/", className: "relocate", children: "HOME" })
+  ] });
+};
 const App = () => {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Routes, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/", element: /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Hero, {}),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(About, {}),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(What, {})
-  ] }) }) }) });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Routes, { children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/", element: /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Hero, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(About, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(What, {})
+    ] }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/about", element: /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(About, {})
+    ] }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/expreance", element: /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(What, {})
+    ] }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/contact", element: /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(About, {})
+    ] }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/error", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Error$1, {}) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "*", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Error$1, {}) })
+  ] }) });
 };
 createRoot(document.getElementById("root")).render(
   /* @__PURE__ */ jsxRuntimeExports.jsx(React.StrictMode, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(BrowserRouter, { basename: "/react_deploy_gh/", children: /* @__PURE__ */ jsxRuntimeExports.jsx(App, {}) }) })
